@@ -93,7 +93,7 @@ public:
     }
 
 
-    std::swap(SharedPtr &shared)
+    void swap(SharedPtr &shared)
     {
         if (&shared == this) {
             return;
