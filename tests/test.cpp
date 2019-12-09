@@ -2,7 +2,6 @@
 #include <gtest/gtest.h>
 #include "SharedPtr.hpp"
 #include <string>
-#include <utility>
 
 TEST(SharedPtr, FromPointer)
 {
