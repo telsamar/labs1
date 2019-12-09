@@ -1,12 +1,8 @@
 // Copyright 2019 <telsamar>
-#include <string.h>
-# include < utility >
-using std :: swap ;
 #include <gtest/gtest.h>
-#include <iostream>
 #include "SharedPtr.hpp"
 #include <string>
-
+# include < utility >
 
 TEST(SharedPtr, FromPointer)
 {
