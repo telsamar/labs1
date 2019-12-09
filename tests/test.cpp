@@ -1,5 +1,5 @@
 // Copyright 2019 <telsamar>
-#include <utility> for swap 
+#include <utility>
 #include <gtest/gtest.h>
 #include <iostream>
 #include "SharedPtr.hpp"
@@ -98,6 +98,7 @@ TEST_F(SharedPtrFixture, MoveConstructor)
 
     EXPECT_EQ(static_cast<bool>(ptrString), false);
     EXPECT_EQ(ptrNone.get(), nullptr);
+	#include "utility"
 }
 
 TEST_F(SharedPtrFixture, AssignmentCopy)
