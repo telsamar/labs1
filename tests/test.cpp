@@ -197,7 +197,7 @@ TEST_F(SharedPtrFixture, ResetWithPointerString)
     EXPECT_EQ(ptrString->size(), newString->size());
 }
 
-TEST_F(SharedPtrFixture, Swap)
+TEST_F(SharedPtrFixture, swap)
 {
     auto *newString = new std::string{"I am a new string"};
     SharedPtr<std::string> ptrNewString{newString};

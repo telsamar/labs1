@@ -1,7 +1,6 @@
 // Copyright 2019 <telsamar>
 #pragma once
 
-#include <iostream>
 #include <atomic>
 #include <cstddef>
 #include <utility>
