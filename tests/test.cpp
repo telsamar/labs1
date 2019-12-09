@@ -1,7 +1,7 @@
 // Copyright 2019 <telsamar>
+#include <utility> for swap 
 #include <gtest/gtest.h>
 #include <iostream>
-#include <utility>
 #include "SharedPtr.hpp"
 #include <string>
 
