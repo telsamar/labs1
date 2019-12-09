@@ -1,6 +1,7 @@
 // Copyright 2019 <telsamar>
 #include <gtest/gtest.h>
 #include <iostream>
+#include <utility>
 #include "SharedPtr.hpp"
 #include <string>
 
