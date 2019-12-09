@@ -92,7 +92,8 @@ public:
         *this = SharedPtr{ptr};
     }
 
-    void std::swap(SharedPtr &shared)
+	std::swap;
+    void swap(SharedPtr &shared)
     {
         if (&shared == this) {
             return;
