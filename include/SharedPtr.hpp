@@ -92,13 +92,13 @@ public:
         *this = SharedPtr{ptr};
     }
 
-    void swap(SharedPtr &shared)
+    void std::swap(SharedPtr &shared)
     {
         if (&shared == this) {
             return;
         }
-        std::swap(pointer, shared.pointer);
-        std::swap(totalUse, shared.totalUse);
+        swap(pointer, shared.pointer);
+        swap(totalUse, shared.totalUse);
     }
     // возвращает количество объектов SharedPtr,
     // которые ссылаются на тот же управляемый объект
