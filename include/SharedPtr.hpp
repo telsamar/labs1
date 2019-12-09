@@ -1,6 +1,7 @@
 // Copyright 2019 <telsamar>
 #pragma once
 
+#include <iostream>
 #include <atomic>
 #include <cstddef>
 
@@ -99,7 +100,6 @@ public:
         std::swap(pointer, shared.pointer);
         std::swap(totalUse, shared.totalUse);
     }
-
     // возвращает количество объектов SharedPtr, которые ссылаются на тот же управляемый объект
     [[nodiscard]] size_t use_count() const
     {
