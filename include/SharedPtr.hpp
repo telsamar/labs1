@@ -100,7 +100,8 @@ public:
         std::swap(totalUse, shared.totalUse);
     }
 
-    // возвращает количество объектов SharedPtr, которые ссылаются на тот же управляемый объект
+    // возвращает количество объектов SharedPtr,
+    // которые ссылаются на тот же управляемый объект
     [[nodiscard]] size_t use_count() const
     {
         return *totalUse;

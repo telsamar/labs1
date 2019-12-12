@@ -44,7 +44,6 @@ protected:
 
     void TearDown() override
     {
-
     }
 };
 
