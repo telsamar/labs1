@@ -13,7 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ddf01a9-150f-4ac4-ba5a-94c0ac04b235" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/tests.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +81,7 @@
       <updated>1576168423437</updated>
       <workItem from="1576168425378" duration="461000" />
       <workItem from="1576168998427" duration="2599000" />
-      <workItem from="1576171709339" duration="3063000" />
+      <workItem from="1576171709339" duration="3222000" />
     </task>
     <servers />
   </component>
