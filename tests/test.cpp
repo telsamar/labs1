@@ -33,7 +33,6 @@ protected:
 
     void TearDown() override
     {
-
     }
 };
 
@@ -182,5 +181,3 @@ TEST_F(SharedPtrFixture, SwapSelf)
     EXPECT_EQ(*ptrString, std::string("I am a string"));
     EXPECT_EQ(ptrString->size(), sourceString->size());
 }
-
-
