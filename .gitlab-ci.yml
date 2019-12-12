@@ -7,14 +7,10 @@ tests:
   script:
     - ./scripts/tests.sh
 
-coverage:
+checks:
   script:
-    - ./scripts/coverage.sh
+    - ./scripts/checks.sh
 
 quality:
   script:
     - ./scripts/duplication.sh
-
-mem_leaks:
-  script:
-    - ./scripts/valgrind.sh
