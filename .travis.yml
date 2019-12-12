@@ -11,7 +11,7 @@ jobs:
   include:
     - name: "checks"
       script:
-        - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./scripts/checks.sh toliak/bootstrap-cpp
+        - docker run -v `pwd`:`pwd` -w `pwd` --cap-add=SYS_PTRACE -t rusdevops/bootstrap-cpp scripts/checks.sh
     - name: "tests"
       script:
         - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./scripts/tests.sh toliak/bootstrap-cpp
