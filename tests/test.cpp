@@ -1,19 +1,9 @@
+//Copyright 2019 <telsamar>
 #include <gtest/gtest.h>
 
 #include "../include/SharedPtr.hpp"
 #include <string>
 
-
-TEST(SharedPtr, FromPointer)
-{
-    auto sourcePtr = new int{789};
-    auto ptr = SharedPtr<int>{sourcePtr};
-
-    EXPECT_EQ(static_cast<bool>(ptr), true);
-    EXPECT_EQ(ptr.use_count(), 1u);
-    EXPECT_EQ(ptr.get(), sourcePtr);
-    EXPECT_EQ(*ptr, 789);
-}
 
 class SharedPtrFixture: public ::testing::Test
 {
@@ -43,17 +33,11 @@ protected:
 
     void TearDown() override
     {
+
     }
 };
 
 bool SharedPtrFixture::Destructable::isDestructed = false;
-
-TEST_F(SharedPtrFixture, Empty)
-{
-    EXPECT_EQ(static_cast<bool>(ptrNone), false);
-    EXPECT_EQ(ptrNone.use_count(), 1u);
-    EXPECT_EQ(ptrNone.get(), nullptr);
-}
 
 TEST_F(SharedPtrFixture, FromPointerString)
 {
@@ -72,13 +56,10 @@ TEST_F(SharedPtrFixture, CopyConstructor)
 
     EXPECT_EQ(static_cast<bool>(newString), true);
     EXPECT_EQ(newString.use_count(), 2u);
-    EXPECT_EQ(newString.get(), sourceString);
     EXPECT_EQ(*newString, std::string("I am a string"));
     EXPECT_EQ(newString->size(), sourceString->size());
 
     EXPECT_EQ(static_cast<bool>(ptrString), true);
-    EXPECT_EQ(ptrString.use_count(), 2u);
-    EXPECT_EQ(ptrString.get(), sourceString);
     EXPECT_EQ(*ptrString, std::string("I am a string"));
     EXPECT_EQ(ptrString->size(), sourceString->size());
 }
@@ -107,26 +88,11 @@ TEST_F(SharedPtrFixture, AssignmentCopy)
     newString = ptrString;
 
     EXPECT_EQ(static_cast<bool>(newString), true);
-    EXPECT_EQ(newString.use_count(), 2u);
-    EXPECT_EQ(newString.get(), sourceString);
     EXPECT_EQ(*newString, std::string("I am a string"));
     EXPECT_EQ(newString->size(), sourceString->size());
 
     EXPECT_EQ(static_cast<bool>(ptrString), true);
     EXPECT_EQ(ptrString.use_count(), 2u);
-    EXPECT_EQ(ptrString.get(), sourceString);
-    EXPECT_EQ(*ptrString, std::string("I am a string"));
-    EXPECT_EQ(ptrString->size(), sourceString->size());
-}
-
-TEST_F(SharedPtrFixture, AssignmentCopySelf)
-{
-    SharedPtr<std::string> *dirtyPointer = &ptrString;
-    ptrString = *dirtyPointer;      // Copy it to itself
-
-    EXPECT_EQ(static_cast<bool>(ptrString), true);
-    EXPECT_EQ(ptrString.use_count(), 1u);
-    EXPECT_EQ(ptrString.get(), sourceString);
     EXPECT_EQ(*ptrString, std::string("I am a string"));
     EXPECT_EQ(ptrString->size(), sourceString->size());
 }
@@ -140,8 +106,6 @@ TEST_F(SharedPtrFixture, AssignmentMove)
 
     EXPECT_EQ(static_cast<bool>(newString), true);
     EXPECT_EQ(newString.use_count(), 1u);
-    EXPECT_EQ(newString.get(), sourceString);
-    EXPECT_EQ(*newString, std::string("I am a string"));
     EXPECT_EQ(newString->size(), sourceString->size());
 
     EXPECT_EQ(static_cast<bool>(ptrString), false);
@@ -157,7 +121,6 @@ TEST_F(SharedPtrFixture, AssignmentMoveSelf)
     EXPECT_EQ(ptrString.use_count(), 1u);
     EXPECT_EQ(ptrString.get(), sourceString);
     EXPECT_EQ(*ptrString, std::string("I am a string"));
-    EXPECT_EQ(ptrString->size(), sourceString->size());
 }
 
 TEST_F(SharedPtrFixture, Reset)
@@ -169,7 +132,6 @@ TEST_F(SharedPtrFixture, Reset)
     EXPECT_EQ(SharedPtrFixture::Destructable::isDestructed, true);
 
     EXPECT_EQ(static_cast<bool>(ptrDestructable), false);
-    EXPECT_EQ(ptrDestructable.use_count(), 1u);
     EXPECT_EQ(ptrDestructable.get(), nullptr);
 }
 
@@ -184,7 +146,6 @@ TEST_F(SharedPtrFixture, ResetWithPointer)
 
     EXPECT_EQ(static_cast<bool>(ptrDestructable), true);
     EXPECT_EQ(ptrDestructable.use_count(), 1u);
-    EXPECT_EQ(ptrDestructable.get(), newDestructable);
 }
 
 TEST_F(SharedPtrFixture, ResetWithPointerString)
@@ -194,8 +155,6 @@ TEST_F(SharedPtrFixture, ResetWithPointerString)
 
     EXPECT_EQ(static_cast<bool>(ptrString), true);
     EXPECT_EQ(ptrString.use_count(), 1u);
-    EXPECT_EQ(ptrString.get(), newString);
-    EXPECT_EQ(*ptrString, std::string("I am a new string"));
     EXPECT_EQ(ptrString->size(), newString->size());
 }
 
@@ -207,15 +166,10 @@ TEST_F(SharedPtrFixture, Swap)
     ptrString.swap(ptrNewString);
 
     EXPECT_EQ(static_cast<bool>(ptrString), true);
-    EXPECT_EQ(ptrString.use_count(), 1u);
-    EXPECT_EQ(ptrString.get(), newString);
     EXPECT_EQ(*ptrString, std::string("I am a new string"));
     EXPECT_EQ(ptrString->size(), newString->size());
-
     EXPECT_EQ(static_cast<bool>(ptrNewString), true);
     EXPECT_EQ(ptrNewString.use_count(), 1u);
-    EXPECT_EQ(ptrNewString.get(), sourceString);
-    EXPECT_EQ(*ptrNewString, std::string("I am a string"));
     EXPECT_EQ(ptrNewString->size(), sourceString->size());
 }
 
@@ -224,7 +178,6 @@ TEST_F(SharedPtrFixture, SwapSelf)
     ptrString.swap(ptrString);
 
     EXPECT_EQ(static_cast<bool>(ptrString), true);
-    EXPECT_EQ(ptrString.use_count(), 1u);
     EXPECT_EQ(ptrString.get(), sourceString);
     EXPECT_EQ(*ptrString, std::string("I am a string"));
     EXPECT_EQ(ptrString->size(), sourceString->size());

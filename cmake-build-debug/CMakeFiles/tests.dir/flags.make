@@ -6,5 +6,5 @@ CXX_FLAGS =  -pedantic -Werror -Wall -Wextra -Wno-unused-command-line-argument -
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/cygdrive/c/универ/GITHUB/labs3/include -isystem /home/Анатолий/.hunter/_Base/9a3594a/0a1854b/c351cc1/Install/include 
+CXX_INCLUDES = -I/cygdrive/c/универ/GITHUB/labs3/include -isystem /home/Анатолий/.hunter/_Base/e14bc15/0a1854b/3113548/Install/include 
 

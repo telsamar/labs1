@@ -181,7 +181,7 @@ hunter_final_config(
 )
 hunter_final_config(
     PACKAGE "HastyNoise"
-    VERSION "0.8.3"
+    VERSION "0.8.2"
 )
 hunter_final_config(
     PACKAGE "ICU"
@@ -281,7 +281,7 @@ hunter_final_config(
 )
 hunter_final_config(
     PACKAGE "OpenBLAS"
-    VERSION "0.3.7"
+    VERSION "0.3.3"
 )
 hunter_final_config(
     PACKAGE "OpenCL"
@@ -293,11 +293,11 @@ hunter_final_config(
 )
 hunter_final_config(
     PACKAGE "OpenCV"
-    VERSION "4.1.1-p0"
+    VERSION "4.0.0-p3"
 )
 hunter_final_config(
     PACKAGE "OpenCV-Extra"
-    VERSION "4.1.1"
+    VERSION "4.0.0"
 )
 hunter_final_config(
     PACKAGE "OpenNMTTokenizer"
@@ -386,14 +386,6 @@ hunter_final_config(
 hunter_final_config(
     PACKAGE "SDL_ttf"
     VERSION "2.0.14-p0"
-)
-hunter_final_config(
-    PACKAGE "SPIRV-Headers"
-    VERSION "1.5.1"
-)
-hunter_final_config(
-    PACKAGE "SPIRV-Tools"
-    VERSION "2019.4-p0"
 )
 hunter_final_config(
     PACKAGE "SimpleSignal"
@@ -1084,10 +1076,6 @@ hunter_final_config(
     VERSION "2.0.0-e33f534-p1"
 )
 hunter_final_config(
-    PACKAGE "libjpeg-turbo"
-    VERSION "2.0.3-p0"
-)
-hunter_final_config(
     PACKAGE "libjson-rpc-cpp"
     VERSION "0.7.0-p3"
 )
@@ -1133,7 +1121,7 @@ hunter_final_config(
 )
 hunter_final_config(
     PACKAGE "libxml2"
-    VERSION "2.9.7-p0"
+    VERSION "2.9.7"
 )
 hunter_final_config(
     PACKAGE "libyuv"
@@ -1550,10 +1538,6 @@ hunter_final_config(
 hunter_final_config(
     PACKAGE "rospack"
     VERSION "2.5.3-p0"
-)
-hunter_final_config(
-    PACKAGE "s3"
-    VERSION "0.0.0-287e4be-p1"
 )
 hunter_final_config(
     PACKAGE "sds"

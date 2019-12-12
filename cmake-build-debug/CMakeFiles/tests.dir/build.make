@@ -79,9 +79,10 @@ tests_EXTERNAL_OBJECTS =
 
 tests.exe: CMakeFiles/tests.dir/tests/test.cpp.o
 tests.exe: CMakeFiles/tests.dir/build.make
-tests.exe: /home/Анатолий/.hunter/_Base/9a3594a/0a1854b/c351cc1/Install/lib/libgtest_maind.a
-tests.exe: libtemplated.a
-tests.exe: /home/Анатолий/.hunter/_Base/9a3594a/0a1854b/c351cc1/Install/lib/libgtestd.a
+tests.exe: /home/Анатолий/.hunter/_Base/e14bc15/0a1854b/3113548/Install/lib/libgtestd.a
+tests.exe: /home/Анатолий/.hunter/_Base/e14bc15/0a1854b/3113548/Install/lib/libgtest_maind.a
+tests.exe: libSharedPtrd.a
+tests.exe: /home/Анатолий/.hunter/_Base/e14bc15/0a1854b/3113548/Install/lib/libgtestd.a
 tests.exe: CMakeFiles/tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/универ/GITHUB/labs3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable tests.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)

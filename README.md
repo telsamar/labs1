@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.com/Toliak/lab0303.svg?branch=master)](https://travis-ci.com/Toliak/lab0303)
+[![coverage](https://gitlab.toliak.ru/bmstu-cpp-3-sem/lab0303/badges/master/pipeline.svg)](https://gitlab.toliak.ru/bmstu-cpp-3-sem/lab0303/pipelines)
+![Code size](https://img.shields.io/github/languages/code-size/Toliak/lab0303.svg)
+![GitHub Repo size](https://img.shields.io/github/repo-size/Toliak/lab0303.svg)
+
 # Лабораторная работа №3
 
 ### Задание
@@ -12,10 +17,8 @@ template <typename T>
 class SharedPtr {
 public:
     SharedPtr();
-    SharedPtr(T* ptr);
     SharedPtr(const SharedPtr& r);
     SharedPtr(SharedPtr&& r);
-    ~SharedPtr();
     auto opeartor=(const SharedPtr& r) -> SharedPtr&;
     auto opeartor=(SharedPtr&& r) -> SharedPtr&;
 
@@ -23,7 +26,7 @@ public:
     operator bool() const;
     auto operator*() const -> T&;
     auto operator->() const -> T*;
-    
+
     auto get() -> T*;
     void reset();
     void reset(T* ptr);

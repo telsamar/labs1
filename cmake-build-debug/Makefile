@@ -67,17 +67,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest.exe --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -88,6 +77,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest.exe --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,17 +122,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named template
+# Target rules for targets named SharedPtr
 
 # Build rule for target.
-template: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 template
-.PHONY : template
+SharedPtr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SharedPtr
+.PHONY : SharedPtr
 
 # fast build rule for target.
-template/fast:
-	$(MAKE) -f CMakeFiles/template.dir/build.make CMakeFiles/template.dir/build
-.PHONY : template/fast
+SharedPtr/fast:
+	$(MAKE) -f CMakeFiles/SharedPtr.dir/build.make CMakeFiles/SharedPtr.dir/build
+.PHONY : SharedPtr/fast
 
 #=============================================================================
 # Target rules for targets named tests
@@ -153,7 +153,7 @@ sources/SharedPtr.o: sources/SharedPtr.cpp.o
 
 # target to build an object file
 sources/SharedPtr.cpp.o:
-	$(MAKE) -f CMakeFiles/template.dir/build.make CMakeFiles/template.dir/sources/SharedPtr.cpp.o
+	$(MAKE) -f CMakeFiles/SharedPtr.dir/build.make CMakeFiles/SharedPtr.dir/sources/SharedPtr.cpp.o
 .PHONY : sources/SharedPtr.cpp.o
 
 sources/SharedPtr.i: sources/SharedPtr.cpp.i
@@ -162,7 +162,7 @@ sources/SharedPtr.i: sources/SharedPtr.cpp.i
 
 # target to preprocess a source file
 sources/SharedPtr.cpp.i:
-	$(MAKE) -f CMakeFiles/template.dir/build.make CMakeFiles/template.dir/sources/SharedPtr.cpp.i
+	$(MAKE) -f CMakeFiles/SharedPtr.dir/build.make CMakeFiles/SharedPtr.dir/sources/SharedPtr.cpp.i
 .PHONY : sources/SharedPtr.cpp.i
 
 sources/SharedPtr.s: sources/SharedPtr.cpp.s
@@ -171,7 +171,7 @@ sources/SharedPtr.s: sources/SharedPtr.cpp.s
 
 # target to generate assembly for a file
 sources/SharedPtr.cpp.s:
-	$(MAKE) -f CMakeFiles/template.dir/build.make CMakeFiles/template.dir/sources/SharedPtr.cpp.s
+	$(MAKE) -f CMakeFiles/SharedPtr.dir/build.make CMakeFiles/SharedPtr.dir/sources/SharedPtr.cpp.s
 .PHONY : sources/SharedPtr.cpp.s
 
 tests/test.o: tests/test.cpp.o
@@ -208,9 +208,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... template"
+	@echo "... test"
+	@echo "... SharedPtr"
 	@echo "... tests"
 	@echo "... sources/SharedPtr.o"
 	@echo "... sources/SharedPtr.i"

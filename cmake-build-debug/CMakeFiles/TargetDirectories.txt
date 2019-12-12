@@ -1,5 +1,5 @@
 /cygdrive/c/универ/GITHUB/labs3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/универ/GITHUB/labs3/cmake-build-debug/CMakeFiles/test.dir
 /cygdrive/c/универ/GITHUB/labs3/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/c/универ/GITHUB/labs3/cmake-build-debug/CMakeFiles/template.dir
+/cygdrive/c/универ/GITHUB/labs3/cmake-build-debug/CMakeFiles/test.dir
+/cygdrive/c/универ/GITHUB/labs3/cmake-build-debug/CMakeFiles/SharedPtr.dir
 /cygdrive/c/универ/GITHUB/labs3/cmake-build-debug/CMakeFiles/tests.dir

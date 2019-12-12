@@ -1,2 +1,0 @@
-/usr/bin/ar.exe qc libtemplated.a  CMakeFiles/template.dir/sources/SharedPtr.cpp.o
-/usr/bin/ranlib.exe libtemplated.a
