@@ -2,7 +2,7 @@
 
 set -ex
 
-./scripts/configurate.sh
+../scripts/configurate.sh
 
 export GTEST_COLOR=1
 CMAKE_CONFIG_OPTS="-DCMAKE_BUILD_TYPE=Debug"

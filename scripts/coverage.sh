@@ -2,7 +2,7 @@
 
 set -ex
 
-./scripts/tests.sh
+../scripts/tests.sh
 
 cmake -H. -B .build -DBUILD_COVERAGE=On
 cmake --build .build --target gcov

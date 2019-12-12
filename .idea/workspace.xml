@@ -13,7 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ddf01a9-150f-4ac4-ba5a-94c0ac04b235" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tests.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tests.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/coverage.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/coverage.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/tests.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +49,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.tests">
+  <component name="RunManager" selected="CMake Application.Unnamed">
     <configuration name="SharedPtr" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SharedPtr" TARGET_NAME="SharedPtr" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -81,7 +83,7 @@
       <updated>1576168423437</updated>
       <workItem from="1576168425378" duration="461000" />
       <workItem from="1576168998427" duration="2599000" />
-      <workItem from="1576171709339" duration="2607000" />
+      <workItem from="1576171709339" duration="2692000" />
     </task>
     <servers />
   </component>
