@@ -3,13 +3,13 @@ image: toliak/bootstrap-cpp:latest
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
+checks:
+  script:
+    - ./scripts/checks.sh
+    -
 tests:
   script:
     - ./scripts/tests.sh
-
-coverage:
-  script:
-    - ./scripts/coverage.sh
 
 quality:
   script:
